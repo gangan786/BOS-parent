@@ -13,11 +13,23 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserServiceImpl implements IUserService {
     @Autowired
     private IUserDao userDao;
+
     @Override
     public User login(User model) {
         //使用MD5进行加密
        model.setPassword(MD5Utils.md5(model.getPassword()));
         User user=userDao.findUserByUserNameAndPassword(model);
         return user;
+    }
+
+    /**
+     * 根据用户id修改密码
+     * @param id
+     * @param password
+     */
+    @Override
+    public void editPassword(String id, String password) {
+        password=MD5Utils.md5(password);
+        userDao.executeUpdate("user.editPassword",password,id);
     }
 }

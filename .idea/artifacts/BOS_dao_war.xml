@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="BOS-dao:war">
-    <output-path>$PROJECT_DIR$/BOS-dao/target</output-path>
-    <root id="archive" name="BOS-dao-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="BOS-dao:war exploded" />
-    </root>
-  </artifact>
-</component>

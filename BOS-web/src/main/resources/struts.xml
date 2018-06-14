@@ -8,6 +8,26 @@
 	<constant name="struts.objectFactory" value="spring"/>
 
 	<package name="basicstruts2" extends="struts-default">
+		
+		<interceptors>
+			<!--指定自定义的拦截器-->
+			<interceptor name="bosLoginInterceptor" class="org.meizhuo.bos.web.interceptor.BOSLoginInterceptor">
+				<!--指定哪些方法不需要拦截-->
+				<param name="excludeMethods">login</param>
+			</interceptor>
+			<!--定义一个拦截器栈，并将自定义和Struts原有的default的拦截器引进-->
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="bosLoginInterceptor"/>
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<!--设置自定义的拦截器栈-->
+		<default-interceptor-ref name="myStack"/>
+		<!--全局结果集-->
+		<global-results>
+			<result name="login">login.jsp</result>
+		</global-results>
+		
 		<!-- 需要进行权限控制的页面访问 -->
 		<action name="page_*_*">
 			<result type="dispatcher">/WEB-INF/pages/{1}/{2}.jsp</result>

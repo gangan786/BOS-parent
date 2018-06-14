@@ -203,6 +203,7 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>2.5</version>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -212,6 +213,7 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+
             <!-- 引入tomcat插件 -->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
@@ -219,10 +221,12 @@
                 <version>2.2</version>
                 <configuration>
                     <path>/bos</path>
-                    <port>8888</port>
+                    <port>15043</port>
                 </configuration>
             </plugin>
+
         </plugins>
+
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -232,6 +236,7 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
@@ -240,6 +245,7 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+
         </resources>
     </build>
 

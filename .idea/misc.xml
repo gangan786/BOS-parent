@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/BOS-dao" />
-    <file type="web" url="file://$PROJECT_DIR$/BOS-entity" />
-    <file type="web" url="file://$PROJECT_DIR$/BOS-utils" />
     <file type="web" url="file://$PROJECT_DIR$/BOS-web" />
   </component>
   <component name="MavenProjectsManager">

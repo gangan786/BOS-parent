@@ -13,4 +13,5 @@ public interface IBaseDao<T> {
     void update(T entity);
      T findById(Serializable id);
      List<T> findAll();
+     void executeUpdate(String queryName,Object ...objects);
 }
