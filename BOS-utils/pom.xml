@@ -18,6 +18,12 @@
             <artifactId>BOS-entity</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <artifactId>BOS-utils</artifactId>
 

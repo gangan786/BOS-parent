@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.meizhuo.bos.entity.Decidedzone" table="bc_decidedzone" >
+
+        <id name="id" type="java.lang.String">
+            <column name="id" length="32" />
+            <generator class="assigned" />
+        </id>
+
+        <many-to-one name="staff" class="org.meizhuo.bos.entity.Staff" fetch="select">
+            <column name="staff_id" length="32" />
+        </many-to-one>
+
+        <property name="name" type="java.lang.String">
+            <column name="name" length="30" />
+        </property>
+
+        <set name="subareas" inverse="true">
+            <key>
+                <column name="decidedzone_id" length="32" />
+            </key>
+            <one-to-many class="org.meizhuo.bos.entity.Subarea" />
+        </set>
+
+    </class>
+</hibernate-mapping>

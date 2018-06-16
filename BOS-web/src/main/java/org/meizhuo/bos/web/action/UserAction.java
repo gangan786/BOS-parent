@@ -24,26 +24,30 @@ public class UserAction extends BaseAction<User> {
     private String checkcode;
 
     public String login() {
-        Map<String, Object> session = ActionContext.getContext().getSession();
-        String rightCode = (String) session.get("key");
-        if (StringUtils.isNotBlank(checkcode) && checkcode.equalsIgnoreCase(rightCode)) {
-            User user = userService.login(model);
-            if (user!=null){
-                ActionContext.getContext().getSession().put("loginUser",user);
-                session.remove("key");
-                return HOME;
-            }else {
-                this.addActionError("用户名或者密码输入错误");
+        if (BOSUtils.getLoginUser()==null){
+            Map<String, Object> session = ActionContext.getContext().getSession();
+            String rightCode = (String) session.get("key");
+            if (StringUtils.isNotBlank(checkcode) && checkcode.equalsIgnoreCase(rightCode)) {
+                User user = userService.login(model);
+                if (user!=null){
+                    ActionContext.getContext().getSession().put("loginUser",user);
+                    return HOME;
+                }else {
+                    this.addActionError("用户名或者密码输入错误");
+                    return LOGIN;
+                }
+            } else {
+                this.addActionError("输入的验证码错误");
                 return LOGIN;
             }
-        } else {
-            this.addActionError("输入的验证码错误");
-            return LOGIN;
+        }else {
+            return HOME;
         }
+
     }
 
 
-    public String logout() throws Exception {
+    public String logout()  {
         ServletActionContext.getRequest().getSession().invalidate();
         return LOGIN;
     }
