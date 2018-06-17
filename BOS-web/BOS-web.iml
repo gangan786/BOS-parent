@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
   <component name="FacetManager">
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
-        </fileset>
-      </configuration>
-    </facet>
     <facet __external-system-id="Maven" type="web" name="Web">
       <facet type="Struts2" name="Struts 2">
         <configuration>
@@ -15,7 +8,7 @@
             <file>file://$MODULE_DIR$/src/main/resources/struts.xml</file>
             <file>jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-convention-plugin/2.3.24/struts2-convention-plugin-2.3.24.jar!/struts-plugin.xml</file>
             <file>jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-core/2.3.24/struts2-core-2.3.24.jar!/struts-default.xml</file>
-            <file>jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-json-plugin/2.5.16/struts2-json-plugin-2.5.16.jar!/struts-plugin.xml</file>
+            <file>jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-json-plugin/2.1.8/struts2-json-plugin-2.1.8.jar!/struts-plugin.xml</file>
             <file>jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-spring-plugin/2.3.24/struts2-spring-plugin-2.3.24.jar!/struts-plugin.xml</file>
           </fileset>
           <propertiesKeys disabled="false" />
