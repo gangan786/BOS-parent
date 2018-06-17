@@ -9,105 +9,115 @@ import java.util.Set;
 
 public class Region implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String id;
-	private String province;
-	private String city;
-	private String district;
-	private String postcode;
-	private String shortcode;
-	private String citycode;
-	private Set subareas = new HashSet(0);
+    private String id;
+    private String province;
+    private String city;
+    private String district;
+    private String postcode;
+    private String shortcode;
+    private String citycode;
+    private Set subareas = new HashSet(0);
 
-	// Constructors
+    // Constructors
 
-	/** default constructor */
-	public Region() {
-	}
+    /**
+     * default constructor
+     */
+    public Region() {
+    }
 
-	/** minimal constructor */
-	public Region(String id) {
-		this.id = id;
-	}
+    /**
+     * minimal constructor
+     */
+    public Region(String id) {
+        this.id = id;
+    }
 
-	/** full constructor */
-	public Region(String id, String province, String city, String district,
-			String postcode, String shortcode, String citycode, Set subareas) {
-		this.id = id;
-		this.province = province;
-		this.city = city;
-		this.district = district;
-		this.postcode = postcode;
-		this.shortcode = shortcode;
-		this.citycode = citycode;
-		this.subareas = subareas;
-	}
+    /**
+     * full constructor
+     */
+    public Region(String id, String province, String city, String district,
+                  String postcode, String shortcode, String citycode, Set subareas) {
+        this.id = id;
+        this.province = province;
+        this.city = city;
+        this.district = district;
+        this.postcode = postcode;
+        this.shortcode = shortcode;
+        this.citycode = citycode;
+        this.subareas = subareas;
+    }
 
-	// Property accessors
+    // Property accessors
 
-	public String getId() {
-		return this.id;
-	}
+    public String getName() {
+        return province + " " + city + " " + district;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public String getId() {
+        return this.id;
+    }
 
-	public String getProvince() {
-		return this.province;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setProvince(String province) {
-		this.province = province;
-	}
+    public String getProvince() {
+        return this.province;
+    }
 
-	public String getCity() {
-		return this.city;
-	}
+    public void setProvince(String province) {
+        this.province = province;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public String getCity() {
+        return this.city;
+    }
 
-	public String getDistrict() {
-		return this.district;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public void setDistrict(String district) {
-		this.district = district;
-	}
+    public String getDistrict() {
+        return this.district;
+    }
 
-	public String getPostcode() {
-		return this.postcode;
-	}
+    public void setDistrict(String district) {
+        this.district = district;
+    }
 
-	public void setPostcode(String postcode) {
-		this.postcode = postcode;
-	}
+    public String getPostcode() {
+        return this.postcode;
+    }
 
-	public String getShortcode() {
-		return this.shortcode;
-	}
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
+    }
 
-	public void setShortcode(String shortcode) {
-		this.shortcode = shortcode;
-	}
+    public String getShortcode() {
+        return this.shortcode;
+    }
 
-	public String getCitycode() {
-		return this.citycode;
-	}
+    public void setShortcode(String shortcode) {
+        this.shortcode = shortcode;
+    }
 
-	public void setCitycode(String citycode) {
-		this.citycode = citycode;
-	}
+    public String getCitycode() {
+        return this.citycode;
+    }
 
-	public Set getSubareas() {
-		return this.subareas;
-	}
+    public void setCitycode(String citycode) {
+        this.citycode = citycode;
+    }
 
-	public void setSubareas(Set subareas) {
-		this.subareas = subareas;
-	}
+    public Set getSubareas() {
+        return this.subareas;
+    }
+
+    public void setSubareas(Set subareas) {
+        this.subareas = subareas;
+    }
 
 }

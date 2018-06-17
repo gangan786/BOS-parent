@@ -1,8 +1,10 @@
 package org.meizhuo.bos.service;
 
 import org.meizhuo.bos.entity.Region;
+import org.meizhuo.bos.utils.PageBean;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @ProjectName: BOS-parent
@@ -19,4 +21,10 @@ import java.util.ArrayList;
  */
 public interface IRegionService {
     void saveBatch(ArrayList<Region> regions);
+
+    void pageQuery(PageBean pageBean);
+
+    List<Region> findAll();
+
+    List<Region> findListByQ(String q);
 }

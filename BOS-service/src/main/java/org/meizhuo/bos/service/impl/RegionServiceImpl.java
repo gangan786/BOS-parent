@@ -3,11 +3,13 @@ package org.meizhuo.bos.service.impl;
 import org.meizhuo.bos.dao.IRegionDao;
 import org.meizhuo.bos.entity.Region;
 import org.meizhuo.bos.service.IRegionService;
+import org.meizhuo.bos.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @ProjectName: BOS-parent
@@ -34,5 +36,26 @@ public class RegionServiceImpl implements IRegionService {
         for (Region region : regions) {
             regionDao.saveOrUpdate(region);
         }
+    }
+
+    @Override
+    public void pageQuery(PageBean pageBean) {
+        regionDao.pageQuery(pageBean);
+    }
+
+    @Override
+    public List<Region> findAll() {
+        return regionDao.findAll();
+    }
+
+    /**
+     * 根据q模糊查询
+     * @param q
+     * @return
+     */
+    @Override
+    public List<Region> findListByQ(String q) {
+
+        return regionDao.findListByQ(q);
     }
 }

@@ -34,16 +34,9 @@ public class StaffAction extends BaseAction<Staff> {
         return LIST;
     }
 
-    private int page;
-    private int rows;
     public String pageQuery(){
-        PageBean<Staff> pageBean = new PageBean<>();
-        pageBean.setCurrentPage(page);
-        pageBean.setPageSize(rows);
-        DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Staff.class);//创建离线查询条件
-        pageBean.setDetachedCriteria(detachedCriteria);
         staffService.pageQuery(pageBean);//执行完毕后，pageBean里面就有数据了
-        this.writeJson(pageBean);
+        this.writeJson(pageBean,new String[]{"currentPage","detachedCriteria","pageSize"});
         return NONE;
     }
 
@@ -68,11 +61,4 @@ public class StaffAction extends BaseAction<Staff> {
         this.ids = ids;
     }
 
-    public void setPage(int page) {
-        this.page = page;
-    }
-
-    public void setRows(int rows) {
-        this.rows = rows;
-    }
 }

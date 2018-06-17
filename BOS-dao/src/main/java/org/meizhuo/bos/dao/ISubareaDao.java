@@ -1,10 +1,7 @@
 package org.meizhuo.bos.dao;
 
-import org.meizhuo.bos.dao.base.BaseDaoImpl;
 import org.meizhuo.bos.dao.base.IBaseDao;
-import org.meizhuo.bos.entity.Region;
-
-import java.util.List;
+import org.meizhuo.bos.entity.Subarea;
 
 /**
  * @ProjectName: BOS-parent
@@ -12,13 +9,12 @@ import java.util.List;
  * @ClassName: ${TYPE_NAME}
  * @Description:
  * @Author: Gangan
- * @CreateDate: 2018/6/17 9:55
+ * @CreateDate: 2018/6/17 14:24
  * @UpdateUser:
- * @UpdateDate: 2018/6/17 9:55
+ * @UpdateDate: 2018/6/17 14:24
  * @UpdateRemark: The modified content
  * @Version: 1.0
  * <p>Copyright: Copyright (c) 2018</p>
  */
-public interface IRegionDao extends IBaseDao<Region> {
-    List<Region> findListByQ(String q);
+public interface ISubareaDao extends IBaseDao<Subarea> {
 }

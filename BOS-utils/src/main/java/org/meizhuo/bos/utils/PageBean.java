@@ -18,11 +18,11 @@ import java.util.List;
  * @Version: 1.0
  * <p>Copyright: Copyright (c) 2018</p>
  */
-public class PageBean<T> {
+public class PageBean {
     private int currentPage;
     private int pageSize;
     private int total;
-    private List<T> rows;
+    private List rows;
     private DetachedCriteria detachedCriteria;//查询条件
 
     public int getCurrentPage() {

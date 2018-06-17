@@ -5,8 +5,10 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.RichTextString;
 import org.apache.poi.ss.usermodel.Row;
+import org.hibernate.criterion.DetachedCriteria;
 import org.meizhuo.bos.entity.Region;
 import org.meizhuo.bos.service.IRegionService;
+import org.meizhuo.bos.utils.PageBean;
 import org.meizhuo.bos.utils.PinYin4jUtils;
 import org.meizhuo.bos.web.action.base.BaseAction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +39,11 @@ import java.util.List;
 @Controller
 @Scope("prototype")
 public class RegionAction extends BaseAction<Region> {
-    private File regionFile;
 
     @Autowired
     private IRegionService regionService;
 
+    private File regionFile;
     public String importXls() throws IOException {
         ArrayList<Region> regions = new ArrayList<>();
         //使用POI解析
@@ -50,7 +52,7 @@ public class RegionAction extends BaseAction<Region> {
         HSSFSheet sheet = workbook.getSheet("Sheet1");
         for (Row row : sheet) {
             int rowNum = row.getRowNum();
-            if (rowNum==0){
+            if (rowNum == 0) {
                 continue;
             }
             String id = row.getCell(0).getStringCellValue();
@@ -79,7 +81,30 @@ public class RegionAction extends BaseAction<Region> {
         return NONE;
     }
 
+    public String pageQuery() {
+
+        regionService.pageQuery(pageBean);
+        writeJson(pageBean,new String[]{"currentPage","detachedCriteria","pageSize","subareas"});
+        return NONE;
+    }
+
+    private String q;
+    public String listajax(){
+        List<Region> regionList=null;
+        if (StringUtils.isNoneBlank(q)){
+            regionList=regionService.findListByQ(q);
+        }else {
+            regionList=regionService.findAll();
+        }
+        this.writeJson(regionList,new String[]{"subareas"});
+        return NONE;
+    }
+
     public void setRegionFile(File regionFile) {
         this.regionFile = regionFile;
+    }
+
+    public void setQ(String q) {
+        this.q = q;
     }
 }

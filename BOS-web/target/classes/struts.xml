@@ -42,7 +42,10 @@
 		</action>
 
 		<action name="regionAction_*" class="regionAction" method="{1}">
+		</action>
 
+		<action name="subareaAction_*" class="subareaAction" method="{1}">
+			<result name="list">WEB-INF/pages/base/subarea.jsp</result>
 		</action>
 
 	</package>
