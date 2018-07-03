@@ -36,7 +36,8 @@ public class StaffAction extends BaseAction<Staff> {
 
     public String pageQuery(){
         staffService.pageQuery(pageBean);//执行完毕后，pageBean里面就有数据了
-        this.writeJson(pageBean,new String[]{"currentPage","detachedCriteria","pageSize"});
+        this.writeJsonByGson(pageBean,"decidedzones","currentPage","detachedCriteria","pageSize");
+//        this.writeJson(pageBean,new String[]{"currentPage","detachedCriteria","pageSize"});
         return NONE;
     }
 

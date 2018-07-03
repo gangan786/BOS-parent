@@ -6,6 +6,7 @@ import org.meizhuo.bos.entity.User;
 import org.meizhuo.bos.service.IUserService;
 import org.meizhuo.bos.utils.BOSUtils;
 import org.meizhuo.bos.web.action.base.BaseAction;
+import org.meizhuo.bos.crm_cxf.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,7 @@ public class UserAction extends BaseAction<User> {
     private IUserService userService;
 
     private String checkcode;
+
 
     public String login() {
         if (BOSUtils.getLoginUser()==null){

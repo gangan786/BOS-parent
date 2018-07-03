@@ -34,5 +34,11 @@ public class SubareaAction extends BaseAction<Subarea> {
         return LIST;
     }
 
+    public String pageQuery(){
+        subareaService.pageQuery(pageBean);
+        this.writeJsonByGson(pageBean,"currentPage","detachedCriteria","pageSize",
+                "decidedzone","subareas");
+        return NONE;
+    }
 
 }

@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b842324c-168e-497b-a772-48a5fbf3553b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/ISubareaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/SubareaDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/ISubareaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/SubareaServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java" afterDir="false" />
+    <list default="true" id="b842324c-168e-497b-a772-48a5fbf3553b" name="Default" comment="完成分区数据的添加修改&#10;对分页代码进行了抽离">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/IDecidedzoneDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/DecidedzoneDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IDecidedzoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/DecidedzoneServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/crm_cxf/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/crm_cxf/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/DecidedzoneAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/IRegionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/IRegionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/base/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/base/BaseDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/RegionDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/RegionDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-dao/target/classes/org/meizhuo/bos/dao/base/BaseDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-dao/target/classes/org/meizhuo/bos/dao/base/BaseDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-dao/target/classes/org/meizhuo/bos/dao/base/IBaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-dao/target/classes/org/meizhuo/bos/dao/base/IBaseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Subarea.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Subarea.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IRegionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IRegionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/RegionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/RegionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/utils/PageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/utils/PageBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/ISubareaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/ISubareaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/SubareaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/SubareaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOS-web/BOS-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/BOS-web.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/RegionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/RegionAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/StaffAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/StaffAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/UserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/UserAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/base/BaseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/base/BaseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOS-web/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/src/main/resources/applicationContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BOS-web/src/main/resources/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/src/main/resources/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/decidedzone.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/decidedzone.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/subarea.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/subarea.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOS-web/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BOS-web/target/classes/org/meizhuo/bos/web/action/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/target/classes/org/meizhuo/bos/web/action/UserAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BOS-web/target/classes/org/meizhuo/bos/web/action/base/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/target/classes/org/meizhuo/bos/web/action/base/BaseAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BOS-web/target/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BOS-web/target/classes/struts.xml" afterDir="false" />
     </list>
@@ -81,29 +83,66 @@
     <favorites_list name="BOS-parent" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BaseDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/base/BaseDaoImpl.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="decidedzone.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/decidedzone.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="1475">
+              <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DecidedzoneAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/DecidedzoneAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
-                <element signature="e#1177#1178#0" expanded="true" />
-                <element signature="e#2954#2955#0" expanded="true" />
-                <element signature="e#3018#3019#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#DecidedzoneAction#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubareaAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java">
+      <file leaf-file-name="DecidedzoneServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/DecidedzoneServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+            <state relative-caret-position="474">
+              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1309#1310#0" expanded="true" />
+                <element signature="e#1359#1360#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StaffAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/StaffAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subarea.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/subarea.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="215" column="40" selection-start-line="215" selection-start-column="40" selection-end-line="215" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubareaAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
@@ -111,57 +150,17 @@
       <file leaf-file-name="Subarea.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Subarea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-              <folding>
-                <element signature="e#1027#1028#0" expanded="true" />
-                <element signature="e#1057#1058#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="275">
+              <caret line="11" column="35" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Region.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="24" />
-              <folding>
-                <element signature="e#1119#1120#0" expanded="true" />
-                <element signature="e#1180#1181#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Subarea.hbm.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Subarea.hbm.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Subarea.hbm.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegionAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/RegionAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="docComment;class#RegionAction#0" />
-                <element signature="method#importXls#0;class#RegionAction#0" />
-                <element signature="method#listajax#0;class#RegionAction#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Region.hbm.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.hbm.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+            <state relative-caret-position="350">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -169,30 +168,10 @@
       <file leaf-file-name="BaseAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/base/BaseAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BOS-web/src/main/resources/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubareaServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/SubareaServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="124">
+              <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#SubareaServiceImpl#0" />
-                <element signature="e#857#858#0" expanded="true" />
+                <element signature="method#writeJson#0;class#BaseAction#0" />
               </folding>
             </state>
           </provider>
@@ -214,6 +193,11 @@
       <find>editPwdWindow</find>
       <find>addSubareaWindow</find>
       <find>addSubareaForm</find>
+      <find>cxf</find>
+      <find>getNAme</find>
+      <find>doass</find>
+      <find>btn</find>
+      <find>查询条件</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,8 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/utils/BOSUtils.java" />
-        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/interceptor/BOSLoginInterceptor.java" />
         <option value="$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/common/index.jsp" />
         <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IUserService.java" />
         <option value="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/User.hbm.xml" />
@@ -237,7 +219,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/BOS-web/src/test/java/AddStaff.java" />
         <option value="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/utils/SpringTest.java" />
-        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/UserAction.java" />
         <option value="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Staff.java" />
         <option value="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Staff.hbm.xml" />
         <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IStaffService.java" />
@@ -246,9 +227,6 @@
         <option value="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/base/IBaseDao.java" />
         <option value="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/utils/PinYin4jUtils.java" />
         <option value="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/utils/PageBean.java" />
-        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/StaffAction.java" />
-        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/base/BaseAction.java" />
-        <option value="$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/subarea.jsp" />
         <option value="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/base/BaseDaoImpl.java" />
         <option value="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.java" />
         <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IRegionService.java" />
@@ -256,15 +234,29 @@
         <option value="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/IRegionDao.java" />
         <option value="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/RegionDaoImpl.java" />
         <option value="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/ISubareaDao.java" />
-        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java" />
-        <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/ISubareaService.java" />
         <option value="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/SubareaDaoImpl.java" />
-        <option value="$PROJECT_DIR$/BOS-web/src/main/resources/struts.xml" />
-        <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/SubareaServiceImpl.java" />
-        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/RegionAction.java" />
         <option value="$PROJECT_DIR$/BOS-web/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.hbm.xml" />
         <option value="$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Subarea.hbm.xml" />
+        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/base/BaseAction.java" />
+        <option value="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/crm_cxf/Customer.java" />
+        <option value="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/crm_cxf/ICustomerService.java" />
+        <option value="$PROJECT_DIR$/BOS-web/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/UserAction.java" />
+        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/RegionAction.java" />
+        <option value="$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/crm_cxf/ICustomerService.java" />
+        <option value="$PROJECT_DIR$/BOS-web/src/main/resources/struts.xml" />
+        <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IDecidedzoneService.java" />
+        <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/DecidedzoneServoce.java" />
+        <option value="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/IDecidedzoneDao.java" />
+        <option value="$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/DecidedzoneDaoImpl.java" />
+        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/DecidedzoneAction.java" />
+        <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/DecidedzoneServiceImpl.java" />
+        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/StaffAction.java" />
+        <option value="$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/subarea.jsp" />
+        <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/ISubareaService.java" />
+        <option value="$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/SubareaServiceImpl.java" />
+        <option value="$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java" />
       </list>
     </option>
   </component>
@@ -328,10 +320,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="984" />
-    <option name="y" value="-12" />
-    <option name="width" value="569" />
-    <option name="height" value="455" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1943" />
+    <option name="height" value="1103" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -341,53 +333,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BOS-dao" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BOS-dao" type="616d4139:PackageViewModuleNode" />
-              <item name="org.meizhuo.bos.dao" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BOS-service" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BOS-service" type="616d4139:PackageViewModuleNode" />
-              <item name="org.meizhuo.bos.service" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BOS-service" type="616d4139:PackageViewModuleNode" />
-              <item name="org.meizhuo.bos.service" type="1f31426a:PackageElementNode" />
-              <item name="impl" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BOS-web" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BOS-web" type="616d4139:PackageViewModuleNode" />
-              <item name="org.meizhuo.bos.web" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
-              <item name="BOS-web" type="616d4139:PackageViewModuleNode" />
-              <item name="org.meizhuo.bos.web" type="1f31426a:PackageElementNode" />
-              <item name="action" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Production">
           <expand>
@@ -579,14 +524,6 @@
               <item name="BOS-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BOS-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BOS-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="BOS-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -623,15 +560,62 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BOS-dao" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BOS-dao" type="616d4139:PackageViewModuleNode" />
+              <item name="org.meizhuo.bos.dao" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BOS-service" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BOS-service" type="616d4139:PackageViewModuleNode" />
+              <item name="org.meizhuo.bos.service" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BOS-service" type="616d4139:PackageViewModuleNode" />
+              <item name="org.meizhuo.bos.service" type="1f31426a:PackageElementNode" />
+              <item name="impl" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BOS-web" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BOS-web" type="616d4139:PackageViewModuleNode" />
+              <item name="org.meizhuo.bos.web" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="BOS-parent" type="58d84e3e:PackageViewProjectNode" />
+              <item name="BOS-web" type="616d4139:PackageViewModuleNode" />
+              <item name="org.meizhuo.bos.web" type="1f31426a:PackageElementNode" />
+              <item name="action" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="Regio&#9;FILE&#9;file://D:/Users/mr.gan/WebProject/BOS-parent/BOS-web/src/main/java/org/meizhuo/bos/web/action/RegionAction.java" />
+    <property name="SearchEverywhereHistoryKey" value="fieldAtt&#9;PSI&#9;JAVA://com.google.gson.FieldAttributes&#10;Regio&#9;FILE&#9;file://D:/Users/mr.gan/WebProject/BOS-parent/BOS-web/src/main/java/org/meizhuo/bos/web/action/RegionAction.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ssh_crm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BOS-web/src/main/webapp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -644,8 +628,13 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\mr.gan\WebProject\BOS-parent\BOS-web\src\main\webapp\WEB-INF\pages\base" />
+      <recent name="D:\Users\mr.gan\WebProject\BOS-parent\BOS-utils\src\main\java\org\meizhuo\bos\crm_cxf" />
+      <recent name="D:\Users\mr.gan\WebProject\BOS-parent\BOS-utils\src\main\java" />
       <recent name="D:\Users\mr.gan\WebProject\BOS-parent\BOS-web\src\main\webapp\js" />
       <recent name="D:\Users\mr.gan\WebProject\BOS-parent\BOS-entity\src\main\java\org\meizhuo\bos\entity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\mr.gan\WebProject\BOS-parent\BOS-web\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -868,7 +857,15 @@
       <workItem from="1529058244009" duration="7058000" />
       <workItem from="1529111873364" duration="725000" />
       <workItem from="1529112641587" duration="16518000" />
-      <workItem from="1529195061611" duration="23238000" />
+      <workItem from="1529195061611" duration="24182000" />
+      <workItem from="1529281380488" duration="178000" />
+      <workItem from="1529281602353" duration="276000" />
+      <workItem from="1529282115763" duration="633000" />
+      <workItem from="1529282820133" duration="3505000" />
+      <workItem from="1529375499271" duration="5959000" />
+      <workItem from="1530584578522" duration="5844000" />
+      <workItem from="1530598267185" duration="7488000" />
+      <workItem from="1530619828733" duration="5934000" />
     </task>
     <task id="LOCAL-00001" summary="完成密码修改  非登录状态拦截功能">
       <created>1528968119529</created>
@@ -898,7 +895,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529204427790</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成分区数据的添加修改&#10;对分页代码进行了抽离">
+      <created>1529227289575</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1529227289575</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -925,16 +929,24 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71296000" />
+    <option name="totallyTimeSpent" value="102057000" />
+  </component>
+  <component name="TodoView" selected-index="3">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32963374" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.33306387" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.20533548" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
@@ -942,28 +954,28 @@
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2497979" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" x="0" y="23" width="1281" height="698" id="Debug" order="3" weight="0.71835804" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" x="0" y="23" width="1281" height="698" id="Debug" order="3" weight="0.40592334" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3249715" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3295325" />
       <window_info anchor="right" id="Capture Analysis" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.47212544" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6707317" />
-      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.4686411" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35119727" />
+      <window_info anchor="bottom" id="Spring" order="13" weight="0.3292683" />
       <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info active="true" content_ui="combo" x="2417" y="96" width="285" height="927" id="Project" order="4" visible="true" weight="0.25303152" />
+      <window_info active="true" content_ui="combo" x="2417" y="96" width="285" height="927" id="Project" order="4" visible="true" weight="0.17623281" />
       <window_info id="Web" order="5" side_tool="true" weight="0.32928804" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32928804" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.3292683" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3292683" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -980,6 +992,17 @@
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
               </option>
               <option name="COLUMN_ORDER">
                 <list>
@@ -1003,7 +1026,8 @@
     <MESSAGE value="完成密码修改  非登录状态拦截功能" />
     <MESSAGE value="完成收派员的资料的添加修改" />
     <MESSAGE value="完成区域数据的导入" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成区域数据的导入" />
+    <MESSAGE value="完成分区数据的添加修改&#10;对分页代码进行了抽离" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成分区数据的添加修改&#10;对分页代码进行了抽离" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1016,21 +1040,39 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/SubareaServiceImpl.java</url>
-          <line>32</line>
+          <line>33</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/RegionAction.java</url>
-          <line>86</line>
+          <url>file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/DecidedzoneAction.java</url>
+          <line>47</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/DecidedzoneAction.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/StaffAction.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="12" />
+      <option name="time" value="25" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1038,163 +1080,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-core/2.3.24/struts2-core-2.3.24.jar!/struts-default.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="167" column="4" selection-start-line="167" selection-start-column="4" selection-end-line="167" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/StaffDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/struts/struts2-json-plugin/2.5.16/struts2-json-plugin-2.5.16.jar!/struts-plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-utils/src/main/java/applicationContext.xml" />
-    <entry file="file://$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/utils/SpringTest.java" />
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/test/java/AddStaff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#AddStaff#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/utils/BOSUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.0.7.Final/hibernate-core-5.0.7.Final.jar!/org/hibernate/criterion/DetachedCriteria.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1915">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/interceptor/BOSLoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#BOSLoginInterceptor#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/UserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-776">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Staff.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IStaffService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/staff.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="283" column="41" selection-start-line="283" selection-start-column="41" selection-end-line="283" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret lean-forward="true" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/webapp/js/jquery.ocupload-1.1.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3915" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ognl/ognl/3.0.6/ognl-3.0.6.jar!/ognl/OgnlRuntime.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="446" selection-start-line="446" selection-end-line="446" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.11/poi-3.11.jar!/org/apache/poi/hssf/record/common/UnicodeString.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-825">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.11/poi-3.11.jar!/org/apache/poi/hssf/usermodel/HSSFRichTextString.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.11/poi-3.11.jar!/org/apache/poi/ss/usermodel/RichTextString.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.11/poi-3.11.jar!/org/apache/poi/POIDocument.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/base/IBaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1206,21 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3975">
           <caret line="195" column="13" selection-start-line="195" selection-start-column="13" selection-end-line="195" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;class#PinYin4jUtils#0" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#974#975#0" expanded="true" />
-            <element signature="e#3709#3710#0" expanded="true" />
-            <element signature="e#3765#3766#0" expanded="true" />
-            <element signature="e#5347#5348#0" expanded="true" />
-            <element signature="e#5406#5407#0" expanded="true" />
-            <element signature="e#6102#6103#0" expanded="true" />
-            <element signature="e#6159#6160#0" expanded="true" />
-            <element signature="e#7316#7317#0" expanded="true" />
-            <element signature="e#7371#7372#0" expanded="true" />
-            <element signature="e#7529#7530#0" expanded="true" />
-            <element signature="e#7586#7587#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1235,41 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="25" column="45" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="45" />
-          <folding>
-            <element signature="docComment;class#PageBean#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/StaffAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="38" column="89" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#StaffAction#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-466">
-          <caret line="207" column="26" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/subarea.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="234" column="78" lean-forward="true" selection-start-line="234" selection-start-column="78" selection-end-line="234" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
@@ -1277,10 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#IRegionService#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1288,12 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="58" column="36" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#RegionServiceImpl#0" />
-            <element signature="e#1205#1206#0" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1301,9 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
           <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1311,17 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
           <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#RegionDaoImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/ISubareaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1329,17 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/resources/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1350,49 +1150,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/SubareaDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#SubareaDaoImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/StaffServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#StaffServiceImpl#0" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
-            <element signature="e#1518#1519#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/SubareaServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#SubareaServiceImpl#0" />
-            <element signature="e#857#858#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/base/BaseDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="575">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="e#1177#1178#0" expanded="true" />
@@ -1402,56 +1169,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Subarea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/base/BaseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        <state relative-caret-position="475">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BOS-web/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="350">
           <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/web/login.jsp" />
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar!/META-INF/maven/commons-beanutils/commons-beanutils/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/FieldAttributes.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/GsonBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ognl/ognl/3.0.6/ognl-3.0.6.jar!/ognl/OgnlRuntime.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="446" selection-start-line="446" selection-end-line="446" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f90fe455-c023-431f-be62-832a3fb63577/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/extensions/com.intellij.database/schema/Generate POJOs.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1501" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret lean-forward="true" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding>
+            <element signature="n#build#0;n#project#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/crm_cxf/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/RegionAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="175">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
           <folding>
             <element signature="docComment;class#RegionAction#0" />
             <element signature="method#importXls#0;class#RegionAction#0" />
@@ -1460,17 +1298,171 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Region.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/test/java/AddStaff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="225">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-utils/src/main/java/org/meizhuo/bos/crm_cxf/ICustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/resources/struts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="50" column="58" selection-start-line="50" selection-start-column="58" selection-end-line="50" selection-end-column="58" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/IDecidedzoneDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/DecidedzoneDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#DecidedzoneDaoImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-dao/src/main/java/org/meizhuo/bos/dao/impl/SubareaDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/IDecidedzoneService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#IDecidedzoneService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/decidedzone.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1475">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="40" selection-end-line="59" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/DecidedzoneAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#DecidedzoneAction#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/StaffAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/ISubareaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/SubareaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#SubareaServiceImpl#0" />
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/base/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="100" column="37" lean-forward="true" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <folding>
+            <element signature="method#writeJson#0;class#BaseAction#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Subarea.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        <state relative-caret-position="350">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-entity/src/main/java/org/meizhuo/bos/entity/Subarea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-service/src/main/java/org/meizhuo/bos/service/impl/DecidedzoneServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/webapp/WEB-INF/pages/base/subarea.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="215" column="40" selection-start-line="215" selection-start-column="40" selection-end-line="215" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOS-web/src/main/java/org/meizhuo/bos/web/action/SubareaAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
@@ -1528,11 +1520,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Struts 2|Web|BOS-web</last-edited>
+          <last-edited>BOS-service</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

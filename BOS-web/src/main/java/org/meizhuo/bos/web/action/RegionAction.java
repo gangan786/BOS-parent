@@ -14,6 +14,7 @@ import org.meizhuo.bos.web.action.base.BaseAction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -84,7 +85,8 @@ public class RegionAction extends BaseAction<Region> {
     public String pageQuery() {
 
         regionService.pageQuery(pageBean);
-        writeJson(pageBean,new String[]{"currentPage","detachedCriteria","pageSize","subareas"});
+//        writeJson(pageBean,new String[]{"currentPage","detachedCriteria","pageSize","subareas"});
+        writeJsonByGson(pageBean,"currentPage","detachedCriteria","pageSize","subareas");
         return NONE;
     }
 

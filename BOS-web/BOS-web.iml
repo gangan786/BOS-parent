@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
   <component name="FacetManager">
-    <facet __external-system-id="Maven" type="web" name="Web">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
+          <file>jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-core/3.0.1/cxf-core-3.0.1.jar!/META-INF/cxf/cxf.xml</file>
+          <file>file://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-core/3.0.1/cxf-core-3.0.1.jar</file>
+          <file>jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.1/cxf-rt-databinding-jaxb-3.0.1.jar!/META-INF/cxf/java2wsbeans.xml</file>
+          <file>file://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-databinding-jaxb/3.0.1/cxf-rt-databinding-jaxb-3.0.1.jar</file>
+          <file>jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxws/3.0.1/cxf-rt-frontend-jaxws-3.0.1.jar!/META-INF/cxf/cxf-extension-jaxws.xml</file>
+          <file>file://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxws/3.0.1/cxf-rt-frontend-jaxws-3.0.1.jar</file>
+          <file>jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/3.0.1/cxf-rt-transports-http-3.0.1.jar!/META-INF/cxf/cxf-servlet.xml</file>
+          <file>file://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/3.0.1/cxf-rt-transports-http-3.0.1.jar</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
+        </sourceRoots>
+      </configuration>
       <facet type="Struts2" name="Struts 2">
         <configuration>
           <fileset id="s2fileset" name="My Fileset " removed="false">
