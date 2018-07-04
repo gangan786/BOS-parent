@@ -1,5 +1,6 @@
 package org.meizhuo.bos.dao.base;
 
+import org.hibernate.criterion.DetachedCriteria;
 import org.meizhuo.bos.utils.PageBean;
 
 import java.io.Serializable;
@@ -26,5 +27,7 @@ public interface IBaseDao<T> {
     void pageQuery(PageBean pageBean);
 
     void saveOrUpdate(T entity);
+
+    List<T> findByCriteria(DetachedCriteria detachedCriteria);
 
 }

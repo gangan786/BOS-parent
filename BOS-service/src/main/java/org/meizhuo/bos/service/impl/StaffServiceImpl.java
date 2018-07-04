@@ -1,5 +1,7 @@
 package org.meizhuo.bos.service.impl;
 import org.apache.commons.lang3.StringUtils;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
 import org.meizhuo.bos.dao.IStaffDao;
 import org.meizhuo.bos.entity.Staff;
 import org.meizhuo.bos.service.IStaffService;
@@ -7,6 +9,8 @@ import org.meizhuo.bos.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @ProjectName: BOS-parent
@@ -57,5 +61,12 @@ public class StaffServiceImpl implements IStaffService {
     @Override
     public void update(Staff staff) {
         staffDao.update(staff);
+    }
+
+    @Override
+    public List<Staff> findListNoDelete() {
+        DetachedCriteria detachedCriteria=DetachedCriteria.forClass(Staff.class);
+        detachedCriteria.add(Restrictions.eq("deltag","0"));
+        return staffDao.findByCriteria(detachedCriteria);
     }
 }

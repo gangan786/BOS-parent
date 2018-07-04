@@ -3,6 +3,8 @@ package org.meizhuo.bos.service;
 import org.meizhuo.bos.entity.Staff;
 import org.meizhuo.bos.utils.PageBean;
 
+import java.util.List;
+
 /**
  * @ProjectName: BOS-parent
  * @Package: org.meizhuo.bos.service
@@ -26,4 +28,6 @@ public interface IStaffService {
     Staff findById(String id);
 
     void update(Staff staff);
+
+    List<Staff> findListNoDelete();
 }

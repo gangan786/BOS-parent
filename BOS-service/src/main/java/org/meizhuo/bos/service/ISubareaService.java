@@ -25,4 +25,5 @@ public interface ISubareaService {
 
     List<Subarea> findAll();
 
+    List<Subarea> findListNotAssociation();
 }

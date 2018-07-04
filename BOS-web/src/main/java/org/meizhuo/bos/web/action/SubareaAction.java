@@ -41,49 +41,54 @@ public class SubareaAction extends BaseAction<Subarea> {
     @Resource
     private ISubareaService subareaService;
 
-    public String add(){
+    public String add() {
         subareaService.save(model);
         return LIST;
     }
 
-    public String pageQuery(){
+    public String pageQuery() {
         DetachedCriteria criteria = pageBean.getDetachedCriteria();
         //动态添加过滤条件
         String addresskey = model.getAddresskey();
 
-        if (StringUtils.isNotBlank(addresskey)){
-            criteria.add(Restrictions.like("addresskey","%"+addresskey+"%"));
+        if (StringUtils.isNotBlank(addresskey)) {
+            criteria.add(Restrictions.like("addresskey", "%" + addresskey + "%"));
         }
 
         Region region = model.getRegion();
-        if (region!=null){
+        if (region != null) {
             String province = region.getProvince();
             String city = region.getCity();
             String district = region.getDistrict();
-            if (StringUtils.isNotBlank(province)){
+            if (StringUtils.isNotBlank(province)) {
                 criteria.createAlias("region", "r");
-                criteria.add(Restrictions.like("r.province","%"+province+"%"));
+                criteria.add(Restrictions.like("r.province", "%" + province + "%"));
             }
-            if (StringUtils.isNoneBlank(city)){
+            if (StringUtils.isNoneBlank(city)) {
                 criteria.createAlias("region", "r");
-                criteria.add(Restrictions.like("r.city","%"+city+"%"));
+                criteria.add(Restrictions.like("r.city", "%" + city + "%"));
             }
-            if (StringUtils.isNotBlank(district)){
+            if (StringUtils.isNotBlank(district)) {
                 criteria.createAlias("region", "r");
-                criteria.add(Restrictions.like("r.district","%"+district+"%"));
+                criteria.add(Restrictions.like("r.district", "%" + district + "%"));
             }
         }
         subareaService.pageQuery(pageBean);
         System.out.println(pageBean);
-        this.writeJsonByGson(pageBean,"currentPage","detachedCriteria","pageSize",
-                "decidedzone","subareas");
+        this.writeJsonByGson(pageBean, "currentPage", "detachedCriteria", "pageSize",
+                "decidedzone", "subareas");
 
         return NONE;
     }
 
-    public String exportXls(){
-       List<Subarea> subareaList= subareaService.findAll();
-       //在内存中创建一个Excel文件
+    /**
+     * 导出所有分区数据
+     *
+     * @return
+     */
+    public String exportXls() {
+        List<Subarea> subareaList = subareaService.findAll();
+        //在内存中创建一个Excel文件
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
         //创建一个标签页
         HSSFSheet sheet = hssfWorkbook.createSheet("分区数据");
@@ -105,19 +110,31 @@ public class SubareaAction extends BaseAction<Subarea> {
         }
         //输出流进行文件下载
         try {
-            String fileName="分区数据.xls";
+            String fileName = "分区数据.xls";
             //获取浏览器类型
             String agent = ServletActionContext.getRequest().getHeader("User-Agent");
-           fileName = FileUtils.encodeDownloadFilename(fileName, agent);
+            fileName = FileUtils.encodeDownloadFilename(fileName, agent);
             String mimeType = ServletActionContext.getServletContext().getMimeType(fileName);//获取文件类型："application/vnd.ms-excel"
-            ServletOutputStream outputStream=ServletActionContext.getResponse().getOutputStream();
+            ServletOutputStream outputStream = ServletActionContext.getResponse().getOutputStream();
             hssfWorkbook.write(outputStream);
             ServletActionContext.getResponse().setContentType(mimeType);
-            ServletActionContext.getResponse().setHeader("content-disposition","attachment;filename="+fileName);
+            ServletActionContext.getResponse().setHeader("content-disposition", "attachment;filename=" + fileName);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return NONE;
+    }
+
+    /**
+     * 查询所有未关联到定区的分区
+     *
+     * @return
+     */
+    public String listajax() {
+        List<Subarea> subareaList = subareaService.findListNotAssociation();
+//        this.writeJson(subareaList,new String[]{"decidedzone","region"});
+                this.writeJsonByGson(subareaList,"decidedzone","region");
         return NONE;
     }
 

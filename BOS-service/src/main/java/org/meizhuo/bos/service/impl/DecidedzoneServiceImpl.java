@@ -33,7 +33,7 @@ public class DecidedzoneServiceImpl implements IDecidedzoneService {
     private ISubareaDao subareaDao;
 
     @Override
-    public void save(Decidedzone model, String[] subareaid) {
+    public void  save(Decidedzone model, String[] subareaid) {
         decidedzoneDao.save(model);
         for (String id : subareaid) {
             Subarea sub = subareaDao.findById(id);

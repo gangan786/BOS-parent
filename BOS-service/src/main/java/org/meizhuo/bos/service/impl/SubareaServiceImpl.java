@@ -1,5 +1,7 @@
 package org.meizhuo.bos.service.impl;
 
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
 import org.meizhuo.bos.dao.ISubareaDao;
 import org.meizhuo.bos.entity.Subarea;
 import org.meizhuo.bos.service.ISubareaService;
@@ -44,5 +46,13 @@ public class SubareaServiceImpl implements ISubareaService {
     @Override
     public List<Subarea> findAll() {
         return subareaDao.findAll();
+    }
+
+    @Override
+    public List<Subarea> findListNotAssociation() {
+        DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Subarea.class);
+        //过滤条件为decidedzone_id为null
+        detachedCriteria.add(Restrictions.isNull("decidedzone"));
+        return subareaDao.findByCriteria(detachedCriteria);
     }
 }

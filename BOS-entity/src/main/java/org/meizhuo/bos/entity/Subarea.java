@@ -6,106 +6,114 @@ package org.meizhuo.bos.entity;
 
 public class Subarea implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String id;
-	private Decidedzone decidedzone;
-	private Region region;
-	private String addresskey;
-	private String startnum;
-	private String endnum;
-	private String single;
-	private String position;
+    private String id;
+    private Decidedzone decidedzone;
+    private Region region;
+    private String addresskey;
+    private String startnum;
+    private String endnum;
+    private String single;
+    private String position;
+    private String subareaid;//此字段与id的意义一样
 
-	// Constructors
+    // Constructors
 
-	/** default constructor */
-	public Subarea() {
-	}
+    /**
+     * default constructor
+     */
+    public Subarea() {
+    }
 
-	/** minimal constructor */
-	public Subarea(String id) {
-		this.id = id;
-	}
+    /**
+     * minimal constructor
+     */
+    public Subarea(String id) {
+        this.id = id;
+    }
 
-	/** full constructor */
-	public Subarea(String id, Decidedzone decidedzone, Region region,
-			String addresskey, String startnum, String endnum, String single,
-			String position) {
-		this.id = id;
-		this.decidedzone = decidedzone;
-		this.region = region;
-		this.addresskey = addresskey;
-		this.startnum = startnum;
-		this.endnum = endnum;
-		this.single = single;
-		this.position = position;
-	}
+    /**
+     * full constructor
+     */
+    public Subarea(String id, Decidedzone decidedzone, Region region,
+                   String addresskey, String startnum, String endnum, String single,
+                   String position) {
+        this.id = id;
+        this.decidedzone = decidedzone;
+        this.region = region;
+        this.addresskey = addresskey;
+        this.startnum = startnum;
+        this.endnum = endnum;
+        this.single = single;
+        this.position = position;
+    }
 
-	// Property accessors
+    // Property accessors
 
-	public String getId() {
-		return this.id;
-	}
+    public String getId() {
+        return this.id;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public void setId(String id) {
+        this.id = id;
+        this.subareaid = id;//在给id赋值的时候同样也给subarea赋值，这样Gson在序列化的时候才能把不为空的subarea转换
+    }
 
-	public Decidedzone getDecidedzone() {
-		return this.decidedzone;
-	}
+    public Decidedzone getDecidedzone() {
+        return this.decidedzone;
+    }
 
-	public void setDecidedzone(Decidedzone decidedzone) {
-		this.decidedzone = decidedzone;
-	}
+    public void setDecidedzone(Decidedzone decidedzone) {
+        this.decidedzone = decidedzone;
+    }
 
-	public Region getRegion() {
-		return this.region;
-	}
+    public Region getRegion() {
+        return this.region;
+    }
 
-	public void setRegion(Region region) {
-		this.region = region;
-	}
+    public void setRegion(Region region) {
+        this.region = region;
+    }
 
-	public String getAddresskey() {
-		return this.addresskey;
-	}
+    public String getAddresskey() {
+        return this.addresskey;
+    }
 
-	public void setAddresskey(String addresskey) {
-		this.addresskey = addresskey;
-	}
+    public void setAddresskey(String addresskey) {
+        this.addresskey = addresskey;
+    }
 
-	public String getStartnum() {
-		return this.startnum;
-	}
+    public String getStartnum() {
+        return this.startnum;
+    }
 
-	public void setStartnum(String startnum) {
-		this.startnum = startnum;
-	}
+    public void setStartnum(String startnum) {
+        this.startnum = startnum;
+    }
 
-	public String getEndnum() {
-		return this.endnum;
-	}
+    public String getEndnum() {
+        return this.endnum;
+    }
 
-	public void setEndnum(String endnum) {
-		this.endnum = endnum;
-	}
+    public void setEndnum(String endnum) {
+        this.endnum = endnum;
+    }
 
-	public String getSingle() {
-		return this.single;
-	}
+    public String getSingle() {
+        return this.single;
+    }
 
-	public void setSingle(String single) {
-		this.single = single;
-	}
+    public void setSingle(String single) {
+        this.single = single;
+    }
 
-	public String getPosition() {
-		return this.position;
-	}
+    public String getPosition() {
+        return this.position;
+    }
 
-	public void setPosition(String position) {
-		this.position = position;
-	}
+    public void setPosition(String position) {
+        this.position = position;
+    }
 
 }

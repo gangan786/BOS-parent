@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
+import java.util.List;
+
 
 /**
  * @ProjectName: BOS-parent
@@ -56,6 +58,12 @@ public class StaffAction extends BaseAction<Staff> {
         staff.setStation(model.getStation());
         staffService.update(staff);
         return LIST;
+    }
+
+    public String listajax(){
+        List<Staff> staffs=staffService.findListNoDelete();
+        this.writeJsonByGson(staffs,"telephone","haspda","deltag","station","standard","decidedzones");
+        return NONE;
     }
 
     public void setIds(String ids) {
