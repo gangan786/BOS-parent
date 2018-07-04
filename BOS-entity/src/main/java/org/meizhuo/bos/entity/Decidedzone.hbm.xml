@@ -9,7 +9,7 @@
             <generator class="assigned" />
         </id>
 
-        <many-to-one name="staff" class="org.meizhuo.bos.entity.Staff" fetch="select">
+        <many-to-one lazy="false" name="staff" class="org.meizhuo.bos.entity.Staff" fetch="select">
             <column name="staff_id" length="32" />
         </many-to-one>
 
