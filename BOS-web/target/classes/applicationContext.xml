@@ -55,11 +55,6 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
-    <!--注册crm客户端代理对象-->
-    <jaxws:client id="crmClient"
-                  serviceClass="org.meizhuo.bos.crm_cxf.ICustomerService"
-                  address="http://192.168.1.101:8080/crm_cxf/service/customer"/>
-
     <!-- 组件扫描 -->
     <context:component-scan base-package="org.meizhuo.bos"/>
 
@@ -67,4 +62,10 @@
     <context:annotation-config/>
 
     <tx:annotation-driven/>
+
+    <!--注册crm客户端代理对象-->
+    <jaxws:client id="crmClient"
+                  serviceClass="org.meizhuo.bos.crm_cxf.ICustomerService"
+                  address="http://192.168.1.101:8080/crm_cxf/service/customer"/>
+
 </beans>

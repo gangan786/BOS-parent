@@ -138,4 +138,15 @@ public class SubareaAction extends BaseAction<Subarea> {
         return NONE;
     }
 
+
+    private String decidedzoneId;
+    public String findListByDecidedzoneId(){
+        List<Subarea> subareaList= subareaService.findListByDecidedId(decidedzoneId);
+        this.writeJsonByGson(subareaList,"decidedzone","subareas");
+        return NONE;
+    }
+
+    public void setDecidedzoneId(String decidedzoneId) {
+        this.decidedzoneId = decidedzoneId;
+    }
 }
