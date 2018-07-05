@@ -63,7 +63,7 @@
                         var id = data[i].id;
                         var name = data[i].name;
                         var telephone = data[i].telephone;
-                        name = name + "(" + telephone + ")";
+                        name = name + " ( " + telephone + " ) ";
                         $("#noassociationSelect").append("<option value='" + id + "'>" + name + "</option>");
                     }
                 });
@@ -77,7 +77,7 @@
                         var id = data[i].id;
                         var name = data[i].name;
                         var telephone = data[i].telephone;
-                        name = name + "(" + telephone + ")";
+                        name = name + " ( " + telephone + " ) ";
                         $("#associationSelect").append("<option value='" + id + "'>" + name + "</option>");
                     }
                 });

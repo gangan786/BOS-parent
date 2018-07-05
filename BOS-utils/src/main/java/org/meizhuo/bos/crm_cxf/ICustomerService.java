@@ -60,4 +60,18 @@ public interface ICustomerService {
             @WebParam(name = "arg0", targetNamespace = "")
                     String arg0);
 
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "assigncustomerstodecidedzone", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.Assigncustomerstodecidedzone")
+    @ResponseWrapper(localName = "assigncustomerstodecidedzoneResponse", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.AssigncustomerstodecidedzoneResponse")
+    public void assigncustomerstodecidedzone(
+            @WebParam(name = "arg0", targetNamespace = "")
+                    String arg0,
+            @WebParam(name = "arg1", targetNamespace = "")
+                    List<Integer> arg1);
+
 }
