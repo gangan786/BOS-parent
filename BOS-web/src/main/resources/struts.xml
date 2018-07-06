@@ -52,5 +52,9 @@
 			<result name="list">/WEB-INF/pages/base/decidedzone.jsp</result>
 		</action>
 
+		<action name="noticebillAction_*" class="noticebillAction" method="{1}">
+			<result name="noticebill_add">WEB-INF/pages/qupai/noticebill_add.jsp</result>
+		</action>
+
 	</package>
 </struts>

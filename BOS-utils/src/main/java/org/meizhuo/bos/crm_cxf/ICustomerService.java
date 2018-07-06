@@ -37,6 +37,34 @@ public interface ICustomerService {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<org.meizhuo.bos.crm_cxf.Customer>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findListHasAssociation", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.FindListHasAssociation")
+    @ResponseWrapper(localName = "findListHasAssociationResponse", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.FindListHasAssociationResponse")
+    public List<Customer> findListHasAssociation(
+            @WebParam(name = "arg0", targetNamespace = "")
+                    String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findDecidedzoneIdByAddress", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.FindDecidedzoneIdByAddress")
+    @ResponseWrapper(localName = "findDecidedzoneIdByAddressResponse", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.FindDecidedzoneIdByAddressResponse")
+    public String findDecidedzoneIdByAddress(
+            @WebParam(name = "arg0", targetNamespace = "")
+                    String arg0);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<org.meizhuo.bos.crm_cxf.Customer>
      */
@@ -50,13 +78,13 @@ public interface ICustomerService {
      * 
      * @param arg0
      * @return
-     *     returns java.util.List<org.meizhuo.bos.crm_cxf.Customer>
+     *     returns org.meizhuo.bos.crm_cxf.Customer
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findListHasAssociation", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.FindListHasAssociation")
-    @ResponseWrapper(localName = "findListHasAssociationResponse", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.FindListHasAssociationResponse")
-    public List<Customer> findListHasAssociation(
+    @RequestWrapper(localName = "findCustomerByTelp", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.FindCustomerByTelp")
+    @ResponseWrapper(localName = "findCustomerByTelpResponse", targetNamespace = "http://service.crm_cxf.meizhuo.org/", className = "org.meizhuo.bos.crm_cxf.FindCustomerByTelpResponse")
+    public Customer findCustomerByTelp(
             @WebParam(name = "arg0", targetNamespace = "")
                     String arg0);
 

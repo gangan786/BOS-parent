@@ -27,7 +27,7 @@
 	src="${pageContext.request.contextPath }/js/easyui/locale/easyui-lang-zh_CN.js"
 	type="text/javascript"></script>
 <script type="text/javascript">
-	var editIndex ;
+	var editIndex ;//全局变量
 	
 	function doAdd(){
 		if(editIndex != undefined){
@@ -165,6 +165,11 @@
 			onAfterEdit : function(rowIndex, rowData, changes){
 				console.info(rowData);
 				editIndex = undefined;
+				$.post('workordermanageAction_add.action',rowData,function(data){
+					if(data == '0'){
+						$.messager.alert("提示信息","工作单信息录入失败！","error");
+					}
+				});
 			}
 		});
 	});
