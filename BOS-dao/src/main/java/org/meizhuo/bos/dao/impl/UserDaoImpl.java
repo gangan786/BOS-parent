@@ -8,13 +8,23 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class UserDaoImpl extends BaseDaoImpl<User> implements IUserDao{
+public class UserDaoImpl extends BaseDaoImpl<User> implements IUserDao {
 
     @Override
     public User findUserByUserNameAndPassword(User model) {
-        String hql="FROM User u where u.username = ? and u.password = ?";
+        String hql = "FROM User u where u.username = ? and u.password = ?";
         List<User> list = (List<User>) this.getHibernateTemplate().find(hql, model.getUsername(), model.getPassword());
-        if (list!=null&&list.size()>0){
+        if (list != null && list.size() > 0) {
+            return list.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public User findUserByUserName(String userName) {
+        String hql = "FROM User u where u.username = ? ";
+        List<User> list = (List<User>) this.getHibernateTemplate().find(hql, userName);
+        if (list != null && list.size() > 0) {
             return list.get(0);
         }
         return null;

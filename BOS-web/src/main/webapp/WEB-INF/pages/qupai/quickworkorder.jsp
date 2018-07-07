@@ -126,7 +126,7 @@
             width: 120,
             align: 'center',
             editor: {
-                type: 'validatebox',
+                type: 'numberbox',
                 options: {
                     required: true
                 }

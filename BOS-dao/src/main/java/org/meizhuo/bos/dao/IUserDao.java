@@ -6,4 +6,6 @@ import org.meizhuo.bos.entity.User;
 public interface IUserDao extends IBaseDao<User> {
 
     User findUserByUserNameAndPassword(User model);
+
+    User findUserByUserName(String userName);
 }
