@@ -11,6 +11,6 @@
     <title>错误</title>
 </head>
 <body>
-<h1>抱歉，你没有权限访问</h1>
+<h1 align="center">抱歉，你没有操作权限</h1>
 </body>
 </html>

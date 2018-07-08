@@ -32,10 +32,11 @@ public class UserAction extends BaseAction<User> {
 
     /**
      * 使用shiro框架进行登录
+     *
      * @return
      */
     public String login() {
-        if (BOSUtils.getLoginUser()==null){
+        if (BOSUtils.getLoginUser() == null) {
             Map<String, Object> session = ActionContext.getContext().getSession();
             String rightCode = (String) session.get("key");
             if (StringUtils.isNotBlank(checkcode) && checkcode.equalsIgnoreCase(rightCode)) {
@@ -51,28 +52,28 @@ public class UserAction extends BaseAction<User> {
                     return LOGIN;
                 }
                 User user = (User) subject.getPrincipal();
-                ActionContext.getContext().getSession().put("loginUser",user);
+                ActionContext.getContext().getSession().put("loginUser", user);
                 return HOME;
             } else {
                 this.addActionError("输入的验证码错误");
                 return LOGIN;
             }
-        }else {
+        } else {
             return HOME;
         }
 
     }
 
     public String login_back() {
-        if (BOSUtils.getLoginUser()==null){
+        if (BOSUtils.getLoginUser() == null) {
             Map<String, Object> session = ActionContext.getContext().getSession();
             String rightCode = (String) session.get("key");
             if (StringUtils.isNotBlank(checkcode) && checkcode.equalsIgnoreCase(rightCode)) {
                 User user = userService.login(model);
-                if (user!=null){
-                    ActionContext.getContext().getSession().put("loginUser",user);
+                if (user != null) {
+                    ActionContext.getContext().getSession().put("loginUser", user);
                     return HOME;
-                }else {
+                } else {
                     this.addActionError("用户名或者密码输入错误");
                     return LOGIN;
                 }
@@ -80,25 +81,25 @@ public class UserAction extends BaseAction<User> {
                 this.addActionError("输入的验证码错误");
                 return LOGIN;
             }
-        }else {
+        } else {
             return HOME;
         }
 
     }
 
 
-    public String logout()  {
+    public String logout() {
         ServletActionContext.getRequest().getSession().invalidate();
         return LOGIN;
     }
 
-    public String editPassword(){
+    public String editPassword() {
         User user = BOSUtils.getLoginUser();
-        String flag="1";
+        String flag = "1";
         try {
-            userService.editPassword(user.getId(),model.getPassword());
+            userService.editPassword(user.getId(), model.getPassword());
         } catch (Exception e) {
-            flag="0";
+            flag = "0";
             e.printStackTrace();
         }
         try {

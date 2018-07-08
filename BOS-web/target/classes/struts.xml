@@ -25,8 +25,13 @@
 		<default-interceptor-ref name="myStack"/>
 		<!--全局结果集-->
 		<global-results>
-			<result name="login">login.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="unauthorizedException">/unauthorized.jsp</result>
 		</global-results>
+		
+		<global-exception-mappings>
+			<exception-mapping exception="org.apache.shiro.authz.UnauthorizedException" result="unauthorizedException"/>
+		</global-exception-mappings>
 
 		<!-- 需要进行权限控制的页面访问 -->
 		<action name="page_*_*">
@@ -58,6 +63,10 @@
 
 		<action name="workordermanageAction_*" class="workordermanageAction" method="{1}">
 
+		</action>
+
+		<action name="functionAction_*" class="functionAction" method="{1}">
+			<result name="list">/WEB-INF/pages/admin/function.jsp</result>
 		</action>
 
 	</package>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+<%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -82,17 +83,21 @@
             text: '增加',
             iconCls: 'icon-add',
             handler: doAdd
-        }, {
-            id: 'button-delete',
-            text: '删除',
-            iconCls: 'icon-cancel',
-            handler: doDelete
-        }, {
-            id: 'button-save',
-            text: '还原',
-            iconCls: 'icon-save',
-            handler: doRestore
-        }];
+        },
+            <shiro:hasPermission name="staff-delete">
+            {
+                id: 'button-delete',
+                text: '删除',
+                iconCls: 'icon-cancel',
+                handler: doDelete
+            },
+            </shiro:hasPermission>
+            {
+                id: 'button-save',
+                text: '还原',
+                iconCls: 'icon-save',
+                handler: doRestore
+            }];
         // 定义列
         var columns = [[{
             field: 'id',

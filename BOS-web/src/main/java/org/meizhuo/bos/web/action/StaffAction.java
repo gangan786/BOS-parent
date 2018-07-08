@@ -1,5 +1,6 @@
 package org.meizhuo.bos.web.action;
 
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.hibernate.criterion.DetachedCriteria;
 import org.meizhuo.bos.entity.Staff;
 import org.meizhuo.bos.service.IStaffService;
@@ -44,11 +45,13 @@ public class StaffAction extends BaseAction<Staff> {
     }
 
     private String ids;
+    @RequiresPermissions("staff-delete")
     public String deleteBatch(){
         staffService.deleteBatch(ids);
         return LIST;
     }
 
+    @RequiresPermissions("staff-edit")
     public String edit(){
         Staff staff = staffService.findById(model.getId());
         //使用页面提交的数据进行覆盖

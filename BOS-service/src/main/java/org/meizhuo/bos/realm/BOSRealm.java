@@ -2,6 +2,7 @@ package org.meizhuo.bos.realm;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.meizhuo.bos.dao.IUserDao;
@@ -34,7 +35,10 @@ public class BOSRealm extends AuthorizingRealm {
      */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        return null;
+        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+        info.addStringPermission("staff-list");
+        //TODO 后期查询权限表完成授权校验
+        return info;
     }
 
     /**

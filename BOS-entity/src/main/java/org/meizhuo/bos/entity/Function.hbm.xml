@@ -5,7 +5,7 @@
     <class name="org.meizhuo.bos.entity.Function" table="auth_function" >
         <id name="id" type="java.lang.String">
             <column name="id" length="32" />
-            <generator class="assigned" />
+            <generator class="uuid" />
         </id>
         <many-to-one name="parentFunction" class="org.meizhuo.bos.entity.Function" fetch="select">
             <column name="pid" length="32" />
