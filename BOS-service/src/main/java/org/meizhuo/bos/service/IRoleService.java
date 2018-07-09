@@ -1,6 +1,9 @@
 package org.meizhuo.bos.service;
 
 import org.meizhuo.bos.entity.Role;
+import org.meizhuo.bos.utils.PageBean;
+
+import java.util.List;
 
 /**
  * @ProjectName: BOS-parent
@@ -18,4 +21,6 @@ import org.meizhuo.bos.entity.Role;
 
 public interface IRoleService {
     void save(Role model, String functionIds);
+
+    void pageQuery(PageBean pageBean);
 }

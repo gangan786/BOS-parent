@@ -1,10 +1,13 @@
-package org.meizhuo.bos.web.action.base;
+package org.meizhuo.bos.web.action;
 
 import org.meizhuo.bos.entity.Role;
 import org.meizhuo.bos.service.IRoleService;
+import org.meizhuo.bos.web.action.base.BaseAction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+
+import java.util.List;
 
 /**
  * @ProjectName: BOS-parent
@@ -32,6 +35,12 @@ public class RoleAction extends BaseAction<Role> {
 
         roleService.save(model,functionIds);
         return LIST;
+    }
+
+    public String pageQuery(){
+        roleService.pageQuery(pageBean);
+        writeJsonByGson(pageBean,"functions","users");
+        return NONE;
     }
 
     public void setFunctionIds(String functionIds) {

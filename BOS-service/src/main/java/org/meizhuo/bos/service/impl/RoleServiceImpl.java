@@ -5,9 +5,12 @@ import org.meizhuo.bos.dao.IRoleDao;
 import org.meizhuo.bos.entity.Function;
 import org.meizhuo.bos.entity.Role;
 import org.meizhuo.bos.service.IRoleService;
+import org.meizhuo.bos.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @ProjectName: BOS-parent
@@ -40,5 +43,10 @@ public class RoleServiceImpl implements IRoleService {
                 model.getFunctions().add(function);
             }
         }
+    }
+
+    @Override
+    public void pageQuery(PageBean pageBean) {
+        roleDao.pageQuery(pageBean);
     }
 }
