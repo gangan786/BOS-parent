@@ -44,14 +44,14 @@ public class BOSRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        List<Function> functionList=null;
+        List<Function> functionList = null;
         //获取当前用户对象
         User user = (User) SecurityUtils.getSubject().getPrincipal();
-        if (user.getUsername().equals("admin")){
+        if (user.getUsername().equals("admin")) {
             DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Function.class);
-             functionList= functionDao.findByCriteria(detachedCriteria);
-        }else {
-           functionList= functionDao.findFunctionByUser(user);
+            functionList = functionDao.findByCriteria(detachedCriteria);
+        } else {
+            functionList = functionDao.findFunctionByUser(user);
         }
         for (Function function : functionList) {
             info.addStringPermission(function.getCode());
