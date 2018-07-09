@@ -14,6 +14,16 @@ public class Function implements java.io.Serializable {
     private String id;
     private Function parentFunction;//当前权限的上级权限
     private String name;
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    private String text;//此字段与name代表的意义一样
     private String code;
     private String description;
     private String page;
@@ -44,6 +54,7 @@ public class Function implements java.io.Serializable {
 
     public void setName(String name) {
         this.name = name;
+        this.text=name;
     }
 
     public String getCode() {

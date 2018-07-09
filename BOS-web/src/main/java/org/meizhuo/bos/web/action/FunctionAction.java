@@ -31,7 +31,7 @@ public class FunctionAction extends BaseAction<Function> {
 
     public String listajax(){
         List<Function> list=functionService.findAll();
-        writeJsonByGson(list,"parentFunction","roles","children");
+        writeJsonByGson(list,"parentFunction","roles");
         return NONE;
     }
 
