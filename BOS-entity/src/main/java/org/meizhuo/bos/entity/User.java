@@ -1,5 +1,6 @@
 package org.meizhuo.bos.entity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,136 +11,157 @@ import java.util.Set;
 
 public class User implements java.io.Serializable {
 
-	// Fields
+    // Fields
 
-	private String id;
-	private String username;
-	private String password;
-	private Double salary;
-	private Date birthday;
-	private String gender;
-	private String station;
-	private String telephone;
-	private String remark;
-	private Set noticebills = new HashSet(0);
-	private Set roles = new HashSet(0);
+    private String id;
+    private String username;
+    private String password;
+    private Double salary;
+    private Date birthday;
+    private String birthdayString;
+    private String gender;
+    private String station;
+    private String telephone;
+    private String remark;
+    private StringBuilder roleNames;
+    private Set noticebills = new HashSet(0);
+    private Set<Role> roles = new HashSet(0);
 
-	// Constructors
+    // Constructors
 
-	/** default constructor */
-	public User() {
-	}
+    /**
+     * default constructor
+     */
+    public User() {
+    }
 
-	/** minimal constructor */
-	public User(String id) {
-		this.id = id;
-	}
+    /**
+     * minimal constructor
+     */
+    public User(String id) {
+        this.id = id;
+    }
 
-	/** full constructor */
-	public User(String id, String username, String password, Double salary,
-			Date birthday, String gender, String station, String telephone,
-			String remark, Set noticebills, Set roles) {
-		this.id = id;
-		this.username = username;
-		this.password = password;
-		this.salary = salary;
-		this.birthday = birthday;
-		this.gender = gender;
-		this.station = station;
-		this.telephone = telephone;
-		this.remark = remark;
-		this.noticebills = noticebills;
-		this.roles = roles;
-	}
+    /**
+     * full constructor
+     */
+    public User(String id, String username, String password, Double salary,
+                Date birthday, String gender, String station, String telephone,
+                String remark, Set noticebills, Set roles) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.salary = salary;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.station = station;
+        this.telephone = telephone;
+        this.remark = remark;
+        this.noticebills = noticebills;
+        this.roles = roles;
+    }
 
-	// Property accessors
+    // Property accessors
 
-	public String getId() {
-		return this.id;
-	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public String getId() {
+        return this.id;
+    }
 
-	public String getUsername() {
-		return this.username;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    public String getUsername() {
+        return this.username;
+    }
 
-	public String getPassword() {
-		return this.password;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getPassword() {
+        return this.password;
+    }
 
-	public Double getSalary() {
-		return this.salary;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public void setSalary(Double salary) {
-		this.salary = salary;
-	}
+    public Double getSalary() {
+        return this.salary;
+    }
 
-	public Date getBirthday() {
-		return this.birthday;
-	}
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
 
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
+    public Date getBirthday() {
+        return this.birthday;
+    }
 
-	public String getGender() {
-		return this.gender;
-	}
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+        if (birthday!=null){
+            this.birthdayString = new SimpleDateFormat("yyyy-MM-dd").format(birthday);
+        }else {
+            birthdayString="暂无详细数据";
+        }
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
+    }
 
-	public String getStation() {
-		return this.station;
-	}
+    public String getGender() {
+        return this.gender;
+    }
 
-	public void setStation(String station) {
-		this.station = station;
-	}
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
-	public String getTelephone() {
-		return this.telephone;
-	}
+    public String getStation() {
+        return this.station;
+    }
 
-	public void setTelephone(String telephone) {
-		this.telephone = telephone;
-	}
+    public void setStation(String station) {
+        this.station = station;
+    }
 
-	public String getRemark() {
-		return this.remark;
-	}
+    public String getTelephone() {
+        return this.telephone;
+    }
 
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
 
-	public Set getNoticebills() {
-		return this.noticebills;
-	}
+    public String getRemark() {
+        return this.remark;
+    }
 
-	public void setNoticebills(Set noticebills) {
-		this.noticebills = noticebills;
-	}
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
 
-	public Set getRoles() {
-		return this.roles;
-	}
+    public Set getNoticebills() {
+        return this.noticebills;
+    }
 
-	public void setRoles(Set roles) {
-		this.roles = roles;
-	}
+    public void setNoticebills(Set noticebills) {
+        this.noticebills = noticebills;
+    }
+
+    public Set getRoles() {
+        return this.roles;
+    }
+
+    public void setRoles(Set roles) {
+        this.roles = roles;
+        roleNames = new StringBuilder();
+        for (Object role : roles) {
+            Role role1 = (Role) role;
+            roleNames.append(role1.getName());
+            roleNames.append("  ");
+        }
+    }
 
 }

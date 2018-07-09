@@ -121,6 +121,12 @@ public class UserAction extends BaseAction<User> {
         return LIST;
     }
 
+    public String pageQuery(){
+        userService.pageQuery(pageBean);
+        writeJsonByGson(pageBean,"noticebills","roles");
+        return NONE;
+    }
+
     public void setCheckcode(String checkcode) {
         this.checkcode = checkcode;
     }

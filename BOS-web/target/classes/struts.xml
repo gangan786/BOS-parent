@@ -40,6 +40,7 @@
 
 		<action name="userAction_*" class="userAction" method="{1}">
             <result name="home" type="redirect">/index.jsp</result>
+			<result name="list">/WEB-INF/pages/admin/userlist.jsp</result>
         </action>
 
 		<action name="staffAction_*" class="staffAction" method="{1}">

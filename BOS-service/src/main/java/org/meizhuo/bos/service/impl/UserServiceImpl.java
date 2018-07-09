@@ -6,6 +6,7 @@ import org.meizhuo.bos.entity.Role;
 import org.meizhuo.bos.entity.User;
 import org.meizhuo.bos.service.IUserService;
 import org.meizhuo.bos.utils.MD5Utils;
+import org.meizhuo.bos.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -46,5 +47,10 @@ public class UserServiceImpl implements IUserService {
                 model.getRoles().add(role);
             }
         }
+    }
+
+    @Override
+    public void pageQuery(PageBean pageBean) {
+        userDao.pageQuery(pageBean);
     }
 }
