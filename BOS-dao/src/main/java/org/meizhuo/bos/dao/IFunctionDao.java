@@ -22,4 +22,8 @@ import java.util.List;
 public interface IFunctionDao extends IBaseDao<Function> {
 
     List<Function> findFunctionByUser(User user);
+
+    List<Function> findAllMenu();
+
+    List<Function> findMenuByUserId(String id);
 }

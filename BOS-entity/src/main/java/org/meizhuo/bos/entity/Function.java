@@ -14,6 +14,15 @@ public class Function implements java.io.Serializable {
     private String id;
     private Function parentFunction;//当前权限的上级权限
     private String name;
+    private String pId;
+
+    public String getpId() {
+        return pId;
+    }
+
+    public void setpId(String pId) {
+        this.pId = pId;
+    }
 
     public String getText() {
         return text;
@@ -46,6 +55,12 @@ public class Function implements java.io.Serializable {
 
     public void setParentFunction(Function parentFunction) {
         this.parentFunction = parentFunction;
+        if (parentFunction == null) {
+            pId = "0";
+        } else {
+            pId = parentFunction.getId();
+        }
+
     }
 
     public String getName() {
@@ -54,7 +69,7 @@ public class Function implements java.io.Serializable {
 
     public void setName(String name) {
         this.name = name;
-        this.text=name;
+        this.text = name;
     }
 
     public String getCode() {

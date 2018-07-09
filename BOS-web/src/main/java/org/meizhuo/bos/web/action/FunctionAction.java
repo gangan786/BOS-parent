@@ -51,4 +51,10 @@ public class FunctionAction extends BaseAction<Function> {
         return NONE;
     }
 
+    public String findMenu(){
+        List<Function> functionList=functionService.findMenu();
+        this.writeJsonByGson(functionList,"parentFunction","roles","children");
+        return NONE;
+    }
+
 }

@@ -2,7 +2,9 @@ package org.meizhuo.bos.service.impl;
 
 import org.meizhuo.bos.dao.IFunctionDao;
 import org.meizhuo.bos.entity.Function;
+import org.meizhuo.bos.entity.User;
 import org.meizhuo.bos.service.IFunctionService;
+import org.meizhuo.bos.utils.BOSUtils;
 import org.meizhuo.bos.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,7 +40,7 @@ public class FunctionServiceImpl implements IFunctionService {
     @Override
     public void save(Function model) {
         Function parentFunction = model.getParentFunction();
-        if (parentFunction!=null&&parentFunction.getId().equals("")){
+        if (parentFunction != null && parentFunction.getId().equals("")) {
             model.setParentFunction(null);
         }
         functionDao.save(model);
@@ -47,6 +49,18 @@ public class FunctionServiceImpl implements IFunctionService {
     @Override
     public void pageQuery(PageBean pageBean) {
         functionDao.pageQuery(pageBean);
+    }
+
+    @Override
+    public List<Function> findMenu() {
+        User loginUser = BOSUtils.getLoginUser();
+        List<Function> list = null;
+        if (loginUser.getUsername().equals("admin")) {
+            list = functionDao.findAllMenu();
+        } else {
+            list = functionDao.findMenuByUserId(loginUser.getId());
+        }
+        return list;
     }
 
 
