@@ -1,6 +1,8 @@
 package org.meizhuo.bos.service.impl;
 
+import org.apache.commons.lang3.StringUtils;
 import org.meizhuo.bos.dao.IUserDao;
+import org.meizhuo.bos.entity.Role;
 import org.meizhuo.bos.entity.User;
 import org.meizhuo.bos.service.IUserService;
 import org.meizhuo.bos.utils.MD5Utils;
@@ -31,5 +33,18 @@ public class UserServiceImpl implements IUserService {
     public void editPassword(String id, String password) {
         password=MD5Utils.md5(password);
         userDao.executeUpdate("user.editPassword",password,id);
+    }
+
+    @Override
+    public void add(User model, String[] roleIds) {
+        model.setPassword(MD5Utils.md5(model.getPassword()));
+        userDao.save(model);
+        if (roleIds!=null&&roleIds.length>0){
+            for (String roleId : roleIds) {
+                Role role = new Role();
+                role.setId(roleId);
+                model.getRoles().add(role);
+            }
+        }
     }
 }

@@ -31,15 +31,22 @@ public class RoleAction extends BaseAction<Role> {
 
 
     private String functionIds;
-    public String add(){
 
-        roleService.save(model,functionIds);
+    public String add() {
+
+        roleService.save(model, functionIds);
         return LIST;
     }
 
-    public String pageQuery(){
+    public String pageQuery() {
         roleService.pageQuery(pageBean);
-        writeJsonByGson(pageBean,"functions","users");
+        writeJsonByGson(pageBean, "functions", "users");
+        return NONE;
+    }
+
+    public String listajax() {
+        List<Role> roleList = roleService.findAll();
+        writeJsonByGson(roleList,"functions", "users");
         return NONE;
     }
 

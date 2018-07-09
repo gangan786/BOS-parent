@@ -49,4 +49,9 @@ public class RoleServiceImpl implements IRoleService {
     public void pageQuery(PageBean pageBean) {
         roleDao.pageQuery(pageBean);
     }
+
+    @Override
+    public List<Role> findAll() {
+        return roleDao.findAll();
+    }
 }

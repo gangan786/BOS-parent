@@ -821,39 +821,39 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="214" parent="201" name="pid">
+    <column id="214" parent="201" name="name">
       <Position>2</Position>
-      <DataType>varchar(32)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="215" parent="201" name="name">
+    <column id="215" parent="201" name="code">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="216" parent="201" name="code">
+    <column id="216" parent="201" name="description">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="217" parent="201" name="description">
+    <column id="217" parent="201" name="page">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="218" parent="201" name="page">
+    <column id="218" parent="201" name="generatemenu">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="219" parent="201" name="generatemenu">
+    <column id="219" parent="201" name="zindex">
       <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="220" parent="201" name="zindex">
+    <column id="220" parent="201" name="pid">
       <Position>8</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="221" parent="201" name="FK33r6np87v1p6gge7t6rpcao5h">

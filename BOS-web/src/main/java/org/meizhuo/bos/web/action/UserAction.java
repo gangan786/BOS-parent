@@ -64,6 +64,10 @@ public class UserAction extends BaseAction<User> {
 
     }
 
+    /**
+     * 此方法已被弃用
+     * @return
+     */
     public String login_back() {
         if (BOSUtils.getLoginUser() == null) {
             Map<String, Object> session = ActionContext.getContext().getSession();
@@ -111,7 +115,17 @@ public class UserAction extends BaseAction<User> {
         return NONE;
     }
 
+    private String[] roleIds;
+    public String add(){
+        userService.add(model,roleIds);
+        return LIST;
+    }
+
     public void setCheckcode(String checkcode) {
         this.checkcode = checkcode;
+    }
+
+    public void setRoleIds(String[] roleIds) {
+        this.roleIds = roleIds;
     }
 }

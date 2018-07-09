@@ -23,4 +23,6 @@ public interface IRoleService {
     void save(Role model, String functionIds);
 
     void pageQuery(PageBean pageBean);
+
+    List<Role> findAll();
 }
