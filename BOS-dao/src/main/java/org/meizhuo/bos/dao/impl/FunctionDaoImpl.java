@@ -3,6 +3,7 @@ package org.meizhuo.bos.dao.impl;
 import org.meizhuo.bos.dao.IFunctionDao;
 import org.meizhuo.bos.dao.base.BaseDaoImpl;
 import org.meizhuo.bos.entity.Function;
+import org.meizhuo.bos.entity.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -27,5 +28,12 @@ public class FunctionDaoImpl extends BaseDaoImpl<Function> implements IFunctionD
         String hql = "FROM Function f WHERE f.parentFunction IS NULL";
         List<Function> list = (List<Function>) this.getHibernateTemplate().find(hql);
         return list;
+    }
+
+    @Override
+    public List<Function> findFunctionByUser(User user) {
+        String hql = "SELECT DISTINCT f FROM Function f LEFT OUTER JOIN f.roles"
+                + " r LEFT OUTER JOIN r.users u WHERE u.id = ?";
+        return  (List<Function>) this.getHibernateTemplate().find(hql, user.getId());
     }
 }

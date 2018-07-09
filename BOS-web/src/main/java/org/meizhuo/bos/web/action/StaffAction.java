@@ -63,6 +63,7 @@ public class StaffAction extends BaseAction<Staff> {
         return LIST;
     }
 
+    @RequiresPermissions("staff-list")
     public String listajax(){
         List<Staff> staffs=staffService.findListNoDelete();
         this.writeJsonByGson(staffs,"telephone","haspda","deltag","station","standard","decidedzones");

@@ -1,13 +1,19 @@
 package org.meizhuo.bos.realm;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.hibernate.criterion.DetachedCriteria;
+import org.meizhuo.bos.dao.IFunctionDao;
 import org.meizhuo.bos.dao.IUserDao;
+import org.meizhuo.bos.entity.Function;
 import org.meizhuo.bos.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
  * @ProjectName: BOS-parent
@@ -26,6 +32,8 @@ public class BOSRealm extends AuthorizingRealm {
 
     @Autowired
     private IUserDao userDao;
+    @Autowired
+    private IFunctionDao functionDao;
 
     /**
      * 授权方法
@@ -36,8 +44,18 @@ public class BOSRealm extends AuthorizingRealm {
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        info.addStringPermission("staff-list");
-        //TODO 后期查询权限表完成授权校验
+        List<Function> functionList=null;
+        //获取当前用户对象
+        User user = (User) SecurityUtils.getSubject().getPrincipal();
+        if (user.getUsername().equals("admin")){
+            DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Function.class);
+             functionList= functionDao.findByCriteria(detachedCriteria);
+        }else {
+           functionList= functionDao.findFunctionByUser(user);
+        }
+        for (Function function : functionList) {
+            info.addStringPermission(function.getCode());
+        }
         return info;
     }
 

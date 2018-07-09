@@ -2,6 +2,9 @@ package org.meizhuo.bos.dao;
 
 import org.meizhuo.bos.dao.base.IBaseDao;
 import org.meizhuo.bos.entity.Function;
+import org.meizhuo.bos.entity.User;
+
+import java.util.List;
 
 /**
  * @ProjectName: BOS-parent
@@ -17,4 +20,6 @@ import org.meizhuo.bos.entity.Function;
  * <p>Copyright: Copyright (c) 2018</p>
  */
 public interface IFunctionDao extends IBaseDao<Function> {
+
+    List<Function> findFunctionByUser(User user);
 }
