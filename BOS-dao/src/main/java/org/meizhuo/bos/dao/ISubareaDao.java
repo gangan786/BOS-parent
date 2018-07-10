@@ -3,6 +3,8 @@ package org.meizhuo.bos.dao;
 import org.meizhuo.bos.dao.base.IBaseDao;
 import org.meizhuo.bos.entity.Subarea;
 
+import java.util.List;
+
 /**
  * @ProjectName: BOS-parent
  * @Package: org.meizhuo.bos.dao
@@ -17,4 +19,5 @@ import org.meizhuo.bos.entity.Subarea;
  * <p>Copyright: Copyright (c) 2018</p>
  */
 public interface ISubareaDao extends IBaseDao<Subarea> {
+    List<Object> findSubareasGroupByProvince();
 }

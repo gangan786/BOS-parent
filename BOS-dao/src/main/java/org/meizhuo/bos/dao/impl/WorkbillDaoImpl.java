@@ -5,6 +5,8 @@ import org.meizhuo.bos.dao.base.BaseDaoImpl;
 import org.meizhuo.bos.entity.Workbill;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * @ProjectName: BOS-parent
  * @Package: org.meizhuo.bos.dao.impl
@@ -20,4 +22,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class WorkbillDaoImpl extends BaseDaoImpl<Workbill> implements IWorkbillDao {
+    @Override
+    public List<Workbill> findNewWorkbills() {
+        return null;
+    }
 }

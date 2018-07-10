@@ -93,6 +93,8 @@
     <!--注册安全管理对象-->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
         <property name="realm" ref="bosRealm"/>
+        <!--注入缓存管理器-->
+        <property name="cacheManager" ref="cacheManager"/>
     </bean>
 
     <!--注册shiro框架的Realm-->
@@ -106,5 +108,44 @@
 
     <!--配置shiro框架提供的切面类，用于创建代理对象-->
     <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor"/>
+
+    <!--注册缓存管理器-->
+    <bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>
+    </bean>
+
+    <bean id="myJob" class="org.meizhuo.bos.jobs.MailJob">
+        <property name="username" value="15007538980@163.com"/>
+        <property name="password" value="chengan1997"/>
+        <property name="smtpServer" value="smtp.163.com"/>
+    </bean>
+
+    <!-- 配置JobDetail -->
+    <bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <!-- 注入目标对象 -->
+        <property name="targetObject" ref="myJob"/>
+        <!-- 注入目标方法 -->
+        <property name="targetMethod" value="execute"/>
+    </bean>
+
+    <!-- 配置触发器 -->
+    <bean id="myTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <!-- 注入任务详情对象 -->
+        <property name="jobDetail" ref="jobDetail"/>
+        <!-- 注入cron表达式，通过这个表达式指定触发的时间点 -->
+        <property name="cronExpression">
+            <value>0/5 * * * * ?</value>
+        </property>
+    </bean>
+
+    <!-- 配置调度工厂 -->
+    <bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <!-- 注入触发器 -->
+        <property name="triggers">
+            <list>
+                <ref bean="myTrigger"/>
+            </list>
+        </property>
+    </bean>
 
 </beans>

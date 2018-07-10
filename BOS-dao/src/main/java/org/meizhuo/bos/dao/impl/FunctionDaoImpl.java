@@ -47,7 +47,7 @@ public class FunctionDaoImpl extends BaseDaoImpl<Function> implements IFunctionD
     @Override
     public List<Function> findMenuByUserId(String id) {
         String hql = "SELECT DISTINCT f FROM Function f LEFT OUTER JOIN f.roles"
-                + " r LEFT OUTER JOIN r.users u WHERE u.id = ? AND f.generatemenu = '1' "
+                + " r LEFT OUTER JOIN r .users u WHERE u.id = ? AND f.generatemenu = '1' "
                 + "ORDER BY f.zindex DESC";
         List<Function> list = (List<Function>) this.getHibernateTemplate().find(hql, id);
         return list;

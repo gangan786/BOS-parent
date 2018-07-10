@@ -3,6 +3,8 @@ package org.meizhuo.bos.dao;
 import org.meizhuo.bos.dao.base.IBaseDao;
 import org.meizhuo.bos.entity.Workbill;
 
+import java.util.List;
+
 /**
  * @ProjectName: BOS-parent
  * @Package: org.meizhuo.bos.dao
@@ -18,4 +20,5 @@ import org.meizhuo.bos.entity.Workbill;
  */
 public interface IWorkbillDao extends IBaseDao<Workbill> {
 
+    List<Workbill> findNewWorkbills();
 }

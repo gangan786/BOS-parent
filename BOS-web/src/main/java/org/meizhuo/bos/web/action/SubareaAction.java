@@ -134,15 +134,22 @@ public class SubareaAction extends BaseAction<Subarea> {
     public String listajax() {
         List<Subarea> subareaList = subareaService.findListNotAssociation();
 //        this.writeJson(subareaList,new String[]{"decidedzone","region"});
-                this.writeJsonByGson(subareaList,"decidedzone","region");
+        this.writeJsonByGson(subareaList, "decidedzone", "region");
         return NONE;
     }
 
 
     private String decidedzoneId;
-    public String findListByDecidedzoneId(){
-        List<Subarea> subareaList= subareaService.findListByDecidedId(decidedzoneId);
-        this.writeJsonByGson(subareaList,"decidedzone","subareas");
+
+    public String findListByDecidedzoneId() {
+        List<Subarea> subareaList = subareaService.findListByDecidedId(decidedzoneId);
+        this.writeJsonByGson(subareaList, "decidedzone", "subareas");
+        return NONE;
+    }
+
+    public String findSubareasGroupByProvince() {
+        List<Object> list = subareaService.findSuberareaByProvice();
+        this.writeJsonByGson(list, "");
         return NONE;
     }
 

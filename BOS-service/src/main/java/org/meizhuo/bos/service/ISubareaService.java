@@ -28,4 +28,6 @@ public interface ISubareaService {
     List<Subarea> findListNotAssociation();
 
     List<Subarea> findListByDecidedId(String decidedzoneId);
+
+    List<Object> findSuberareaByProvice();
 }
