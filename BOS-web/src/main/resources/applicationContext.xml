@@ -134,7 +134,7 @@
         <property name="jobDetail" ref="jobDetail"/>
         <!-- 注入cron表达式，通过这个表达式指定触发的时间点 -->
         <property name="cronExpression">
-            <value>0/5 * * * * ?</value>
+            <value>0/5 * 12 * * ?</value>
         </property>
     </bean>
 
