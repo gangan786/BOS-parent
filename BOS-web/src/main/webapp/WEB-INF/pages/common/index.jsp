@@ -237,8 +237,7 @@
         <tr>
             <td style="width: 300px;">
                 <div style="color: #999; font-size: 8pt;">
-                    传智播客 | Powered by <a href="http://www.itcast.cn/">itcast.cn</a>
-                </div>
+                    BOS物流管理系统 | Powered by <a href="https://github.com/gangan786">ganganmaster.top</a>                </div>
             </td>
             <td style="width: *;" class="co1"><span id="online"
                                                     style="background: url(${pageContext.request.contextPath }/images/online.png) no-repeat left;padding-left:18px;margin-left:3px;font-size:8pt;color:#005590;">在线人数:1</span>
